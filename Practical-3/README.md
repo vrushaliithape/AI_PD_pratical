@@ -1,108 +1,70 @@
-# Practical 3: Sentiment Analysis using TensorFlow
+🐦 Twitter Sentiment Analysis
+📌 Project Overview
 
-## Aim
-To develop a Sentiment Analysis model that analyzes customer reviews of products or services and classifies them as Positive or Negative using a Deep Learning approach.
+This project builds a Sentiment Analysis Model to classify tweets as Positive, Negative, or Neutral using Natural Language Processing (NLP) techniques.
 
----
+The model preprocesses text data using NLTK, applies stemming and stopword removal, and prepares cleaned text for machine learning classification.
 
-## Introduction
-Sentiment Analysis is a Natural Language Processing (NLP) technique used to determine whether a piece of text expresses positive, negative, or neutral sentiment.
+📂 Dataset
 
-In this project, we build a Deep Learning model using TensorFlow to analyze customer reviews and automatically classify their sentiment. This helps businesses understand customer feedback and improve their products or services.
+Dataset Name: Twitter Entity Sentiment Analysis
 
----
+Total Records: 74,682 tweets
 
-## Application
-This AI prototype can be used in:
+Columns:
 
-- E-commerce platforms (Amazon, Flipkart)
-- Service feedback systems
-- Product review analysis
-- Social media monitoring
-- Customer satisfaction analysis
+twitterid
 
----
+identity
 
-## Tools and Technologies Used
-- Python
-- TensorFlow / Keras
-- NumPy
-- Pandas
-- Scikit-learn
-- Matplotlib
-- NLP techniques (Tokenization, Padding)
+sentiment
 
----
+tweet
 
-## Dataset Description
-The dataset contains customer reviews and corresponding sentiment labels.
+🔗 Dataset Link:
+https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
 
-- Input: twitter training dataset 
-- Output: Sentiment (Positive / Negative)
-- Type of problem: Binary Classification
-- Dataset split: 80% Training, 20% Testing
+⚙️ Technologies Used
 
-Before training, the text data is preprocessed using:
-- Tokenization
-- Sequence padding
-- Conversion of text to numerical format
+Python
 
----
+Pandas
 
-## Model Architecture
-The model is built using TensorFlow Sequential API and includes:
+NumPy
 
-- Embedding Layer
-- LSTM / Dense Layer
-- Output Layer (Sigmoid activation)
+NLTK
 
-Loss Function: Binary Crossentropy  
-Optimizer: Adam  
-Evaluation Metrics: Accuracy, Precision, Recall  
+Scikit-learn
 
----
+🧹 Data Preprocessing
 
-## Model Training
-The model is trained using:
+Converted text to lowercase
 
-- Epochs: 10–20
-- Batch Size: 32
-- Validation Split: 0.2
+Removed HTML tags
 
-The model learns patterns from customer review text to classify sentiment correctly.
+Removed special characters
 
----
+Removed stopwords
 
-## Model Evaluation
-The trained model is evaluated using:
+Applied Porter Stemming
 
-- Accuracy
-- Precision
-- Recall
-- Confusion Matrix (optional)
+Tokenization & POS tagging
 
-These metrics measure how well the model predicts customer sentiment.
+🚀 Model Workflow
 
----
+Load Dataset
 
-## Results
-The model successfully classifies twitter training  reviews into positive and negative categories.
+Clean & preprocess tweets
 
+Convert text to numerical features (TF-IDF/CountVectorizer)
 
-The results indicate that the model performs effectively in sentiment prediction.
+Train classification model
 
----
+Evaluate using Accuracy, Precision, Recall
 
-## Conclusion
-In this practical, we successfully developed a Sentiment Analysis model using TensorFlow. The model was trained on customer review data and evaluated using standard performance metrics.
+📊 Evaluation Metrics
 
-This project demonstrates how AI can be used to automatically analyze customer feedback and assist businesses in decision-making.
-
----
-
-## Learning Outcomes
-- Understanding Natural Language Processing (NLP)
-- Implementing Text Preprocessing techniques
-- Building Deep Learning models using TensorFlow
-- Evaluating classification models
-- Applying AI to real-world business problems
+Accuracy
+Precision
+Recall
+Confusion Matrix
